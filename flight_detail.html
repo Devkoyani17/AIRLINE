@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plane Information</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .font-cursive {
+      font-family: 'Pacifico', cursive;
+    }
+  </style>
+</head>
+
+<body class="text-white">
+
+  <!-- Hero Background -->
+  <div class="min-h-screen bg-cover bg-center" style="background-image: url('air1.jpg');">
+    <div class="bg-black bg-opacity-70 min-h-screen px-8 py-4">
+
+      <!-- Navbar -->
+      <nav class="flex items-center justify-between py-4">
+        <div class="text-3xl font-cursive text-blue-400">Airline</div>
+        <ul class="flex space-x-6 text-lg">
+          <li><a href="admin_data.html" class="hover:text-blue-400 transition">Home</a></li>
+          <li><a href="staff_info.html" class="hover:text-blue-400 transition">Staff Information</a></li>
+          <li><a href="customer_info.html" class="hover:text-blue-400 transition">Customer Information</a></li>
+          <li><a href="flight_detail.html" class="hover:text-blue-400 transition">Flight Details</a></li>
+          <li><a href="edit.html" class="hover:text-blue-400 transition">Edit Details</a></li>
+          <li><a href="home.html" class="hover:text-blue-400 transition">Logout</a></li>
+        </ul>
+      </nav>
+
+      <!-- Content Container -->
+      <div class="bg-white bg-opacity-90 text-gray-900 rounded-xl shadow-2xl p-8 mt-10 max-w-7xl mx-auto">
+        <h2 class="text-4xl font-bold text-center text-blue-700 mb-8">Plane Information</h2>
+        <div class="overflow-x-auto">
+          <table class="min-w-full border border-gray-300">
+            <thead>
+              <tr class="bg-blue-500 text-white">
+                <th class="py-3 px-4 border">Plane Number</th>
+                <th class="py-3 px-4 border">Pilot Name</th>
+                <th class="py-3 px-4 border">Route</th>
+                <th class="py-3 px-4 border">Capacity</th>
+                <th class="py-3 px-4 border">Airline</th>
+                <th class="py-3 px-4 border">Flight Status</th>
+              </tr>
+            </thead>
+            <tbody class="text-center">
+              <tr class="hover:bg-gray-100">
+                <td class="py-2 px-4 border">PL001</td>
+                <td class="py-2 px-4 border">John Smith</td>
+                <td class="py-2 px-4 border">New York - London</td>
+                <td class="py-2 px-4 border">300</td>
+                <td class="py-2 px-4 border">British Airways</td>
+                <td class="py-2 px-4 border">On Time</td>
+              </tr>
+              <tr class="hover:bg-gray-100">
+                <td class="py-2 px-4 border">PL002</td>
+                <td class="py-2 px-4 border">Mary Johnson</td>
+                <td class="py-2 px-4 border">Delhi - Mumbai</td>
+                <td class="py-2 px-4 border">180</td>
+                <td class="py-2 px-4 border">Air India</td>
+                <td class="py-2 px-4 border">Delayed</td>
+              </tr>
+              <tr class="hover:bg-gray-100">
+                <td class="py-2 px-4 border">PL003</td>
+                <td class="py-2 px-4 border">James Brown</td>
+                <td class="py-2 px-4 border">Dubai - Sydney</td>
+                <td class="py-2 px-4 border">400</td>
+                <td class="py-2 px-4 border">Emirates</td>
+                <td class="py-2 px-4 border">On Time</td>
+              </tr>
+              <tr class="hover:bg-gray-100">
+                <td class="py-2 px-4 border">PL004</td>
+                <td class="py-2 px-4 border">Emily Davis</td>
+                <td class="py-2 px-4 border">Paris - Tokyo</td>
+                <td class="py-2 px-4 border">220</td>
+                <td class="py-2 px-4 border">Air France</td>
+                <td class="py-2 px-4 border">Cancelled</td>
+              </tr>
+              <tr class="hover:bg-gray-100">
+                <td class="py-2 px-4 border">PL005</td>
+                <td class="py-2 px-4 border">Michael Lee</td>
+                <td class="py-2 px-4 border">San Francisco - Honolulu</td>
+                <td class="py-2 px-4 border">150</td>
+                <td class="py-2 px-4 border">United Airlines</td>
+                <td class="py-2 px-4 border">On Time</td>
+              </tr>
+              <tr class="hover:bg-gray-100">
+                <td class="py-2 px-4 border">PL006</td>
+                <td class="py-2 px-4 border">Sophia Wilson</td>
+                <td class="py-2 px-4 border">Beijing - Moscow</td>
+                <td class="py-2 px-4 border">320</td>
+                <td class="py-2 px-4 border">China Airlines</td>
+                <td class="py-2 px-4 border">Delayed</td>
+              </tr>
+              <tr class="hover:bg-gray-100">
+                <td class="py-2 px-4 border">PL007</td>
+                <td class="py-2 px-4 border">Chris Martin</td>
+                <td class="py-2 px-4 border">Los Angeles - Vancouver</td>
+                <td class="py-2 px-4 border">250</td>
+                <td class="py-2 px-4 border">WestJet</td>
+                <td class="py-2 px-4 border">On Time</td>
+              </tr>
+              <tr class="hover:bg-gray-100">
+                <td class="py-2 px-4 border">PL008</td>
+                <td class="py-2 px-4 border">Olivia Taylor</td>
+                <td class="py-2 px-4 border">Rome - Istanbul</td>
+                <td class="py-2 px-4 border">280</td>
+                <td class="py-2 px-4 border">Turkish Airlines</td>
+                <td class="py-2 px-4 border">On Time</td>
+              </tr>
+              <tr class="hover:bg-gray-100">
+                <td class="py-2 px-4 border">PL009</td>
+                <td class="py-2 px-4 border">Daniel White</td>
+                <td class="py-2 px-4 border">Berlin - Zurich</td>
+                <td class="py-2 px-4 border">200</td>
+                <td class="py-2 px-4 border">Lufthansa</td>
+                <td class="py-2 px-4 border">Delayed</td>
+              </tr>
+              <tr class="hover:bg-gray-100">
+                <td class="py-2 px-4 border">PL010</td>
+                <td class="py-2 px-4 border">Emma Roberts</td>
+                <td class="py-2 px-4 border">Madrid - Lisbon</td>
+                <td class="py-2 px-4 border">160</td>
+                <td class="py-2 px-4 border">Iberia</td>
+                <td class="py-2 px-4 border">On Time</td>
+              </tr>
+              <tr class="hover:bg-gray-100">
+                <td class="py-2 px-4 border">PL011</td>
+                <td class="py-2 px-4 border">Noah Harris</td>
+                <td class="py-2 px-4 border">Chicago - Miami</td>
+                <td class="py-2 px-4 border">190</td>
+                <td class="py-2 px-4 border">American Airlines</td>
+                <td class="py-2 px-4 border">Cancelled</td>
+              </tr>
+              <tr class="hover:bg-gray-100">
+                <td class="py-2 px-4 border">PL012</td>
+                <td class="py-2 px-4 border">Isabella Clark</td>
+                <td class="py-2 px-4 border">Bangkok - Phuket</td>
+                <td class="py-2 px-4 border">220</td>
+                <td class="py-2 px-4 border">Thai Airways</td>
+                <td class="py-2 px-4 border">On Time</td>
+              </tr>
+              <tr class="hover:bg-gray-100">
+                <td class="py-2 px-4 border">PL013</td>
+                <td class="py-2 px-4 border">Liam Walker</td>
+                <td class="py-2 px-4 border">Sydney - Auckland</td>
+                <td class="py-2 px-4 border">210</td>
+                <td class="py-2 px-4 border">Qantas</td>
+                <td class="py-2 px-4 border">On Time</td>
+              </tr>
+              <tr class="hover:bg-gray-100">
+                <td class="py-2 px-4 border">PL014</td>
+                <td class="py-2 px-4 border">Ava Adams</td>
+                <td class="py-2 px-4 border">Seoul - Singapore</td>
+                <td class="py-2 px-4 border">290</td>
+                <td class="py-2 px-4 border">Singapore Airlines</td>
+                <td class="py-2 px-4 border">Delayed</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>

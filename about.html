@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - Airline Reservation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .font-cursive {
+      font-family: 'Pacifico', cursive;
+    }
+  </style>
+</head>
+<body class="text-white">
+
+  <!-- Background -->
+  <div class="relative min-h-screen bg-cover bg-center" style="background-image: url('air1.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-70 z-0"></div>
+
+    <!-- Navbar -->
+    <nav class="flex items-center justify-between px-8 py-4 bg-transparent relative z-10">
+      <div class="text-3xl font-cursive text-blue-400">Airline</div>
+      <ul class="flex space-x-6 text-lg">
+        <li><a href="home.html" class="hover:text-blue-400 transition">Home</a></li>
+        <li><a href="login_check.html" class="hover:text-blue-400 transition">Login</a></li>
+        <li><a href="support.html" class="hover:text-blue-400 transition">Support</a></li>
+        <li><a href="about.html" class="hover:text-blue-400 transition">About Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- About Content -->
+    <section class="relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-100px)] text-center px-6">
+      <h1 class="text-5xl font-bold text-blue-400 mb-6">About Us</h1>
+      <p class="max-w-3xl text-lg text-gray-200 leading-relaxed">
+        At <span class="text-blue-300 font-semibold">Airline Reservation System</span>, we aim to revolutionize the way you fly. Our platform is designed to make flight booking fast, reliable, and stress-free. 
+        Whether you are planning a vacation, a business trip, or a spontaneous getaway, we bring you unbeatable deals, real-time updates, and world-class support at your fingertips.
+      </p>
+
+      <p class="mt-6 max-w-3xl text-lg text-gray-200 leading-relaxed">
+        With partnerships across all major airlines and hotel providers, our mission is to be your most trusted travel companion.
+        Join us as we help you explore the skies with convenience and confidence.
+      </p>
+
+      <a href="login_check.html" class="mt-10 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-lg transition shadow-lg">
+        Get Started
+      </a>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 text-center py-6">
+    <p class="text-sm">&copy; 2025 Airline Reservation System. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
