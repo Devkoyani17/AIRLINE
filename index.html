@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -13,64 +13,87 @@
     .font-cursive {
       font-family: 'Pacifico', cursive;
     }
-    .scroll-fade {
+    .popup-slide-in {
+      animation: slideIn 1s ease-out forwards;
       opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s ease-out;
+      transform: translateX(40px);
     }
-    .scroll-fade.show {
-      opacity: 1;
-      transform: translateY(0);
+
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
   </style>
 </head>
 <body class="text-white">
 
-  
+  <!-- Hero Background -->
   <div class="relative h-screen bg-cover bg-center" style="background-image: url('air1.jpg');">
     <div class="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
 
-    
+    <!-- Navbar -->
     <nav class="flex items-center justify-between px-8 py-4 bg-transparent relative z-10">
       <div class="text-3xl font-cursive text-blue-400">Airline</div>
-      <ul class="flex space-x-6 text-lg">
-        <li><a href="home.html" class="hover:text-blue-400 transition">Home</a></li>
+      <ul class="flex flex-wrap space-x-6 text-lg">
+        <li><a href="index.html" class="hover:text-blue-400 transition">Home</a></li>
         <li><a href="login_check.html" class="hover:text-blue-400 transition">Login</a></li>
         <li><a href="support.html" class="hover:text-blue-400 transition">Support</a></li>
         <li><a href="about.html" class="hover:text-blue-400 transition">About Us</a></li>
       </ul>
     </nav>
 
-    <section class="h-full flex flex-col justify-center items-start px-16 relative z-10">
-      <h1 class="text-6xl font-bold text-white max-w-3xl leading-tight drop-shadow-lg">
-        Welcome to <span class="text-blue-400">Airline Reservation System</span>
-      </h1>
-      <p class="mt-6 text-xl text-gray-200 max-w-xl leading-relaxed">
-        Book flights seamlessly and explore the world with our easy-to-use online platform. Find great deals, manage bookings, and travel smarter.
-      </p>
-      <a href="login_check.html" class="mt-8 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-lg transition shadow-lg">
-        Book Now
-      </a>
+    <!-- Hero Content with Popup -->
+    <section class="h-full flex justify-start items-center px-6 md:px-16 relative z-10">
+      <!-- Responsive: Grid adapts to 1 or 2 columns -->
+      <div class="grid md:grid-cols-2 gap-10 items-center w-full">
+        <!-- Left: Welcome Text -->
+        <div>
+          <!-- Responsive: Heading scales on screen sizes -->
+          <h1 class="text-5xl md:text-6xl font-bold text-white leading-tight drop-shadow-lg">
+            Welcome to <span class="text-blue-400">Airline Reservation System</span>
+          </h1>
+          <p class="mt-6 text-lg md:text-xl text-gray-200 max-w-xl leading-relaxed">
+            Book flights seamlessly and explore the world with our easy-to-use online platform. Find great deals, manage bookings, and travel smarter.
+          </p>
+          <a href="login_check.html" class="mt-8 inline-block px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-lg transition shadow-lg">
+            Book Now
+          </a>
+        </div>
+
+        <!-- Right: Creative Popup -->
+        <div class="popup-slide-in w-full bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 rounded-2xl p-6 shadow-2xl text-white max-w-md ml-auto">
+          <div class="flex items-center mb-4">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/globe--v1.png" class="w-10 h-10 mr-3" alt="Explore Icon"/>
+            <h3 class="text-2xl font-bold">Explore the World 🌍</h3>
+          </div>
+          <p class="mb-4 text-white text-base">
+            From tropical getaways to snowy adventures — let us take you there with comfort and style. ✈️
+          </p>
+          <a href="login_check.html" class="inline-block mt-2 bg-white text-blue-600 px-4 py-2 rounded-md font-semibold hover:bg-blue-100 transition">
+            Start Your Journey
+          </a>
+        </div>
+      </div>
     </section>
   </div>
 
-  <section class="bg-white text-gray-800 py-20 px-12 scroll-fade">
+  <!-- Why Choose Us -->
+  <section class="bg-white text-gray-800 py-20 px-6 md:px-12">
     <h2 class="text-4xl font-bold text-center mb-10 text-blue-700">Why Choose Us?</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
-      
+    <!-- Responsive: Grid adapts to 1, 2, or 3 columns -->
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 text-center">
       <div class="bg-blue-50 p-8 rounded-2xl shadow-xl hover:scale-105 transition transform">
         <img src="https://img.icons8.com/color/96/lock--v1.png" class="w-11 h-11 mx-auto mb-4" alt="Secure Icon" />
         <h3 class="text-2xl font-semibold mb-2">Fast & Secure</h3>
         <p>Lightning-fast bookings with bank-level encryption for your data security and privacy.</p>
       </div>
-
       <div class="bg-blue-50 p-8 rounded-2xl shadow-xl hover:scale-105 transition transform">
         <img src="https://img.icons8.com/color/96/technical-support.png" class="w-11 h-11 mx-auto mb-4" alt="Support Icon" />
-       
         <h3 class="text-2xl font-semibold mb-2">24/7 Global Support</h3>
         <p>Human support available 24/7 via chat, email, and phone — we’ve got your back, always.</p>
       </div>
-
       <div class="bg-blue-50 p-8 rounded-2xl shadow-xl hover:scale-105 transition transform">
         <img src="https://img.icons8.com/ios-filled/96/discount--v1.png" class="w-11 h-11 mx-auto mb-4" alt="Deals Icon" />
         <h3 class="text-2xl font-semibold mb-2">Unbeatable Deals</h3>
@@ -79,9 +102,11 @@
     </div>
   </section>
 
-  <section class="bg-gray-100 text-gray-800 py-20 px-12">
+  <!-- Services -->
+  <section class="bg-gray-100 text-gray-800 py-20 px-6 md:px-12">
     <h2 class="text-4xl font-bold text-center mb-10 text-blue-700">Our Services</h2>
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+    <!-- Responsive: Grid adapts to 1, 2, or 4 columns -->
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 text-center">
       <div class="p-6 bg-white rounded-lg shadow-lg">
         <h4 class="text-xl font-semibold mb-2">✈️ Flight Booking</h4>
         <p>Book domestic and international flights in seconds.</p>
@@ -101,9 +126,11 @@
     </div>
   </section>
 
-  <section class="bg-white text-gray-800 py-16 px-6 md:px-20 scroll-fade">
+  <!-- Contact Info -->
+  <section class="bg-white text-gray-800 py-16 px-6 md:px-20">
     <h2 class="text-4xl font-bold text-center mb-10 text-blue-700">Contact Us</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
+    <!-- Responsive: Grid changes for contact layout -->
+    <div class="grid gap-8 md:grid-cols-3 text-center md:text-left">
       <div>
         <h4 class="text-xl font-semibold mb-3">📧 Email</h4>
         <p class="text-gray-700">support@airline.com</p>
@@ -114,34 +141,15 @@
       </div>
       <div>
         <h4 class="text-xl font-semibold mb-3">📍 Address</h4>
-        <p class="text-gray-700">123 Skyway Avenue,Central Mumbai, 400008</p>
+        <p class="text-gray-700">123 Skyway Avenue, Central Mumbai, 400008</p>
       </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="bg-gray-900 text-gray-300 text-center py-6">
     <p class="text-sm">&copy; 2025 Airline Reservation System. All rights reserved.</p>
   </footer>
 
-  <script>
-    const faders = document.querySelectorAll('.scroll-fade');
-    const reveal = () => {
-      faders.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-          el.classList.add('show');
-        }
-      });
-    };
-    window.addEventListener('scroll', reveal);
-    window.addEventListener('load', reveal);
-  </script>
-
 </body>
 </html>
- -->                         
- <html>
-   <body>
-                                          under development
-   </body>
- </html>
